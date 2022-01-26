@@ -13,4 +13,11 @@ public class MainClassTest {
     public void testGetClassNumber() {
         Assertions.assertTrue(MainClass.getClassNumber()>45, "Returned number is not great, than 45");
     }
+
+    @Test
+    public void testGetClassString() {
+        boolean condition = ((MainClass.getClassString().contains("hello")) ||
+                (MainClass.getClassString().contains("Hello")));
+        Assertions.assertTrue(condition, "Returned text isn't contains 'hello' or 'Hello'");
+    }
 }
